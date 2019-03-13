@@ -1,0 +1,12 @@
+create database schoolDB; 
+
+CREATE TABLE students (
+	
+	studentID int PRIMARY KEY, 
+	studentName varchar(40) NOT NULL, 
+	password varchar(40) NOT NULL,
+	studentAddress varchar(60), 
+	studentPhone varchar(20),
+	studentEmail varchar(50)
+	
+);
