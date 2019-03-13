@@ -1,5 +1,13 @@
 from tkinter import *
 fields = 'Last Name', 'First Name', 'Job', 'Country'
+#import webbrowser    #import for internet browsers
+import os   #import for command promt
+
+#url='www.google.ca'   #url for browser
+#chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'    #path for program
+
+def commandprompt(): os.system("start cmd")
+
 
 def fetch(entries):
    for entry in entries:
@@ -34,7 +42,9 @@ if __name__ == '__main__':
    b2 = Button(root, text='Quit', command=root.quit)
    b2.pack(side=LEFT, padx=5, pady=5)
    b3 = Button(root, text='Open File',
-               command=exec(open("secondWin.py").read()))
+               #command=exec(open("secondWin.py").read()))
+               #command=webbrowser.get(chrome_path).open(url))    #open google chrome
+               command=(os.system("start cmd"))) #open command prompt
    b3.pack(side=RIGHT, padx=5, pady=5)
    root.mainloop()
 
