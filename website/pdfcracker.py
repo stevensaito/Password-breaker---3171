@@ -1,30 +1,31 @@
-import sys
-from pyPdf import PdfFileReader
+#!/usr/bin/python3
 
-helpmsg = "Simple PDF brute force script\n"
-helpmsg += "Cracks pwds of the format <first 4 chars of email>0000-9999."
-helpmsg += "Example: snow0653\n\n"
-helpmsg += "Usage: pdfbrute.py <encrypted_pdf_file> <email_address>"
-if len(sys.argv) < 2:
-    print helpmsg
+__author__ = 'spyx'
+import PyPDF2
+import sys
+import optparse
+
+parser = optparse.OptionParser()
+parser.add_option('-f','--file',dest='file',help='encrypted file')
+parser.add_option('-w','--wordlist',dest='word',help='wordlist file')
+(options, args) = parser.parse_args()
+if options.file == None or options.word == None:
+    print('./pdfCracker.py -f [file] -w [wordlist file]')
     sys.exit()
 
-pdffile = PdfFileReader(file(sys.argv[1], "rb"))
-if pdffile.isEncrypted == False:
-    print "[!] The file is not protected with any password. Exiting."
-    exit
+file = options.file
+word = options.word
 
-print "[+] Attempting to Brute force. This could take some time..."
+wordlist = open(word)
 
-z = ""
-for i in range(0, 9999):
-    z = str(i)
-    while (len(z) < 4):
-        z = "0" + z
+pdf = PyPDF2.PdfFileReader(open(file,'rb'))
+if not pdf.isEncrypted:
+    print('No password')
+else:
+    for line in wordlist.readlines():
+        if pdf.decrypt(line.rstrip()) :
+            print('[+] PASSWORD: ' +line)
+            sys.exit()
+    print('[-] Password not found')
 
-    a = str(sys.argv[2][:4] + str(z))
-
-    if pdffile.decrypt(a) > 0:
-        print "[+] Password is: " + a
-        print "[...] Exiting.."
-        sys.exit()
+#https://null-byte.wonderhowto.com/forum/crack-pdf-python-0162896/
