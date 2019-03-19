@@ -20,7 +20,7 @@ def Main():
     if(options.zname == None) | (options.dname == None):
         print parser.usage
         exit(0)
-    else
+    else:
         zname = options.zname
         dname = options.dname
 
