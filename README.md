@@ -3,7 +3,6 @@ A python project that can crack a password for a PDF, zip file and web form, use
 
 TODO
 - Create a GUI interface for the cracking script (Essential)
-- Have program determine what crack to use depending on file type (Essential)
 - Looking into cracking web form (EXTRA)
 - Concentrated Subject attack, reconnaissance on owner of file, create additional dictionary specific to owner (EXTRA)
 - Exporting crack programs (EXTRA)
@@ -16,6 +15,8 @@ COMPLETED
 - We will have a database that will store usernames and passwords
 - We will create a crack for zip folders and individual files
 - Looking into Kivy for the GUI or Tkinter
+- Have program determine what crack to use depending on file type (Essential) Manual Input ATM
+- Single script cracks both PDF and Zip files
 
 HOW TO RUN IN KALI LINUX
 - Make sure to change the directory (cd) to the directory holding the pdfcrack.py file
