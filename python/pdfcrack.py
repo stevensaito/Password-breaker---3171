@@ -2,6 +2,13 @@
 import os
 import subprocess
 
+################################################################
+#HOW TO RUN IN KALI LINUX
+# Make sure to change the directory (cd) to the directory holding the pdfcrack.py file
+#Enter "python3 pdfcrack.py" to run the program (python3 filename.extension)
+#################################################################
+
+
 #HAVE PROGRAM DECIDE WHICH CRACK IT IS DOING
 
 

@@ -17,6 +17,10 @@ COMPLETED
 - We will create a crack for zip folders and individual files
 - Looking into Kivy for the GUI or Tkinter
 
+HOW TO RUN IN KALI LINUX
+- Make sure to change the directory (cd) to the directory holding the pdfcrack.py file
+- Enter "python3 pdfcrack.py" to run the program (python3 filename.extension)
+
 References:
 
 -[Output terminal output into Python variable](https://stackoverflow.com/questions/2449250/any-way-to-assign-terminal-output-to-variable-with-python)
