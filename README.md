@@ -1,15 +1,21 @@
 # Password-breaker---3171
-A python project that can crack a password for a web form login, uses Kali Linux
-Looking into Kivy for the GUI or Tkinter
+A python project that can crack a password for a PDF, zip file and web form, uses Kali Linux
 
+TODO
+- Create a GUI interface for the cracking script (Essential)
+- Have program determine what crack to use depending on file type (Essential)
+- Looking into cracking web form (EXTRA)
+- Concentrated Subject attack, reconnaissance on owner of file, create additional dictionary specific to owner (EXTRA)
+- Exporting crack programs (EXTRA)
+- REPORT (Essential)
+
+COMPLETED
 - We first will try to create a program that will crack a locked file
 - A program that will crack a password (and username) for a web form.
 - We will create a website with a simple login and welcome screen.
 - We will have a database that will store usernames and passwords
-- We will use Python to code the project and create a GUI interface
-
-EXTRA:
-We will create a crack for zip folders and individual files
+- We will create a crack for zip folders and individual files
+- Looking into Kivy for the GUI or Tkinter
 
 References:
 
